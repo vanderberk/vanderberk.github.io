@@ -1,0 +1,688 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Berk Gökberk</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8f2dfa06-983a-4494-9d30-6784faac35fc" class="page sans"><header><h1 class="page-title">Berk Gökberk</h1><p class="page-description"></p></header><div class="page-body"><div id="4015c299-917c-48d6-9843-a921cfa7479b" class="column-list"><div id="c2613e9e-a0a0-4d85-b1ec-29910a19f8c2" style="width:18.75%" class="column"><figure id="d7d24918-1946-4eb7-b04d-db131c9eebd4" class="image" style="text-align:left"><a href="Berk%20Go%CC%88kberk%208f2dfa06983a44949d306784faac35fc/0ef3292f-c338-45cb-871d-f4d9294d1b46.png"><img style="width:120px" src="Berk%20Go%CC%88kberk%208f2dfa06983a44949d306784faac35fc/0ef3292f-c338-45cb-871d-f4d9294d1b46.png"/></a></figure><p id="b626f90c-8ad3-4ead-9fe6-07fde613cfd8" class="">
+</p></div><div id="7c5dbbb1-5475-4a59-897a-aaed6e5ede27" style="width:81.25%" class="column"><p id="f1eced5f-8162-4c00-bac3-5d9f9a46f1c1" class=""><mark class="highlight-gray"><strong>Assistant Professor<br/><br/></strong></mark><mark class="highlight-gray">Department of Computer Engineering<br/>Boğaziçi University<br/>berk.gokberk @ bogazici.edu.tr<br/></mark></p><p id="8c720129-78f8-453c-849a-81b1a61f29e6" class="">
+</p></div></div><figure id="170ecdb7-9eeb-8022-ad5a-e6c0e2f83370" class="link-to-page"><a href="Berk%20Go%CC%88kberk%208f2dfa06983a44949d306784faac35fc/List%20of%20Publications%20170ecdb79eeb8022ad5ae6c0e2f83370.html"><span class="icon">🦩</span>List of Publications</a></figure><h3 id="80557709-0ff6-4bbf-80c1-3648eeeeb81b" class="block-color-default">Biography</h3><p id="9986838f-cb55-40a3-943e-67b1900d980b" class=""><mark class="highlight-gray">Berk Gökberk graduated from the Computer Engineering Department, Boğaziçi University, Turkey, in 1999. He obtained his MS and PhD degrees from the same department in 2001 and 2006. During his graduate study, he focused on 2D and 3D face recognition. From 2006 until 2008, he was a senior scientist at the Information Systems and Security department, Philips Research Eindhoven, where he conducted research on biometrics, especially fingerprint biometrics, template protection systems, and 3D face recognition. From 2008 until 2013, he was with the Signals of Systems group in the Department of Electrical Engineering Mathematics and Computer Science, University of Twente. From 2014 until 2021, he worked as an Assistant Professor in the Computer Engineering Department at MEF University. Currently, he is a faculty member in the Department of Computer Engineering at Boğaziçi University.</mark></p><h3 id="173ecdb7-9eeb-8081-b0f0-eb76a4898d90" class="block-color-default">Research Interests</h3><p id="e7614498-db5b-499b-bb01-a36d9fdce576" class=""><mark class="highlight-gray">Computer vision, machine learning, biometrics, face recognition, fingerprint recognition, <br/>classifier fusion, forensics, surveillance, and computer graphics<br/></mark></p><h3 id="508dd64a-9680-4fde-9add-00cecb9213a5" class="block-color-default">Academic Profile</h3><p id="fe0dfc42-bbb2-4532-9438-bd641f37ba65" class=""><a href="https://scholar.google.com/citations?user=GPFZB0EAAAAJ">Google Scholar, </a><a href="https://orcid.org/0000-0001-6299-1610">Orcid</a>, <a href="https://www.scopus.com/authid/detail.uri?authorId=8895785900">Scopus</a>, <a href="https://dblp.org/pid/46/4922.html">DBLP</a>, <a href="https://www.semanticscholar.org/author/B.-G%C3%B6kberk/1743634">Semantic Scholar</a></p><h3 id="550890af-5406-45cf-b769-0f8e779af7a3" class="block-color-default">Education</h3><p id="f9532ac3-9b0f-4424-9758-a690b2170f42" class=""><mark class="highlight-gray">2001-2006: PhD, Boğaziçi University, Department of Computer Engineering<br/>1999-2001: MSc, Boğaziçi University, Department of Computer Engineering<br/>1994-1999: BSc, Boğaziçi University, Department of Computer Engineering<br/></mark></p><h3 id="84fa52ac-3ac7-458e-ae7b-8d22312de98d" class="block-color-default">Experience</h3><p id="14362c1f-695b-46aa-8b96-984de4e042a0" class=""><mark class="highlight-gray">2021 – Present: Boğaziçi University, Dept. of Computer Engineering, Faculty member<br/>2014 – 2021: Boğaziçi University, Dept. of Computer Engineering, Part-time faculty member<br/>2014 – 2021: MEF University, Dept. of Computer Engineering, Assistant Professor<br/>2008 – 2013: University of Twente, The Netherlands, Department of EEMC, Researcher<br/>2006 – 2008: Philips Research, The Netherlands, ISS Group, Senior Scientist<br/>1999 – 2006: Boğaziçi University, Dept. of Computer Engineering, Teaching Assistant<br/>1998 – 1999: Oracle Turkey, Technical Analyst<br/></mark></p><h3 id="4bb821e8-3e97-4dd4-8928-13c6bd1a16c2" class="block-color-default">Awards</h3><p id="5b827379-bf0b-43b7-879c-e52a22960c96" class=""><mark class="highlight-gray"><strong>2006, Best PhD Thesis Award</strong></mark><mark class="highlight-gray"><br/>Boğaziçi University, Three-dimensional Face Recognition<br/></mark></p><p id="f91ad14c-087f-41b9-b8d7-3c60b4943aa9" class=""><mark class="highlight-gray"><strong>2024, Alper Atalay Award, 2nd Prize</strong></mark><mark class="highlight-gray"><br/>Kantarcı MG, Gökberk B and Akarun L (2024), &quot;A Novel Part-based Benchmark for 3D Object Reconstruction; [3B Nesne Geriçatma İçin Parça Tabanlı Değerlendirme Önerisi]&quot; , In IEEE 32nd Conference on Signal Processing and Communications Applications. [<br/></mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU61531.2024.10600720">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200895526&amp;doi=10.1109%2fSIU61531.2024.10600720&amp;partnerID=40&amp;md5=77da72c14fccf343c3ebb7e981b3538c">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="0fe44f22-e2f2-4500-b81a-4bf1ec072e36" class=""><mark class="highlight-gray"><strong>2024, Alper Atalay Award, 3rd Prize</strong></mark><mark class="highlight-gray"><br/>Özçelik TO, Gökberk B and Akarun L (2024), &quot;Self-Supervised Dense Visual Representation Learning; [Kendini Eğiterek Sık Görsel Temsil Öğrenimi]&quot;, In IEEE 32nd Conference on Signal Processing and Communications Applications. [<br/></mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU61531.2024.10600771">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200914574&amp;doi=10.1109%2fSIU61531.2024.10600771&amp;partnerID=40&amp;md5=f45db94afe3e525d9583d0b534ff9061">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="30ac62eb-35bd-4bc4-8c9d-8931b8a1f3f5" class=""><mark class="highlight-gray"><strong>2023, Sıddık Boğa Yarman Award, 3rd Prize<br/><br/></strong></mark><mark class="highlight-gray">Girgin E, Gökberk B and Akarun L (2023), &quot;A Novel Occlusion Index; [Yeni Bir Örtme Endeksi]&quot;, In IEEE 31st Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU59756.2023.10223983">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85173546709&amp;doi=10.1109%2fSIU59756.2023.10223983&amp;partnerID=40&amp;md5=db6e6dc001480e31c9f7725a4178626b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="490afdcd-f7f0-4040-a9cf-aa6941b591ac" class=""><mark class="highlight-gray"><strong>2012, Best Paper Award</strong></mark><mark class="highlight-gray"><br/>Alyüz N, Gökberk B and Akarun L (2012), &quot;Adaptive model-based 3D face registration for occlusion invariance&quot;, In European Conference on Computer Vision Workshops - Benchmarking Facial Image Analysis Technologies.<br/></mark></p><p id="e1d48fd0-19ee-4f10-8395-fb689bc68651" class=""><mark class="highlight-gray"><strong>2007, Best Student Paper Award (Alper Atalay)</strong></mark><mark class="highlight-gray"><br/>Gökberk B, Dutaǧaci H, Akarun L and Sankur B (2007), &quot;Analysis of representation and feature extraction schemes for 3D face recognition; [3B yüz tanima i̇çin betimleme ve öznitelik çikarim yöntemlerinin incelenmesi]&quot;, In IEEE 15th Signal Processing and Communications Applications. [<br/></mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2007.4298757">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-50249171190&amp;doi=10.1109%2fSIU.2007.4298757&amp;partnerID=40&amp;md5=0dd06a6d6ddfb5d60bbcdc0baeb66f1b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="d50f6ea7-8e7a-49b0-a8b2-f4113aefecb6" class=""><mark class="highlight-gray"><strong>2006, Best Student Paper Award</strong></mark><mark class="highlight-gray"><br/>Gökberk B and Akarun L (2006), &quot;Comparative analysis of decision-level fusion algorithms for 3D face recognition&quot;, In International Conference on Pattern Recognition. Vol. 3, pp. 1018 – 1021. [<br/></mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICPR.2006.387">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-34147134995&amp;doi=10.1109%2fICPR.2006.387&amp;partnerID=40&amp;md5=eabb075305e97cf725fe4e7f19e4d45f">URL</a></mark><mark class="highlight-gray">] Track: Systems, Robotics, and Applications</mark></p><p id="b7a10497-6472-4a36-b01b-effefdd17a08" class=""><mark class="highlight-gray"><strong>2005, Best Paper Award</strong></mark><mark class="highlight-gray"><br/>Gökberk B, Irfanoglu MO, Akarun L and Alpaydin E (2005), &quot;Selection of location, frequency, and orientation parameters of 2D Gabor wavelets for face recognition&quot;, In Lecture Notes in Computer Science (Advanced Studies in Biometrics). Vol. 3161, pp. 138 – 146. [<br/></mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/11493648_9">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-23944446608&amp;doi=10.1007%2f11493648_9&amp;partnerID=40&amp;md5=a28062fff20c4854324c7f50dea61206">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="6dd58833-76e1-421c-bb60-80227fa32869" class=""><mark class="highlight-gray"><strong>2004, Second Best Student Paper Award (Alper Atalay) <br/><br/></strong></mark><mark class="highlight-gray">Irfanoǧlu MO, Gökberk B and Akarun L (2004), &quot;3D shape-based face recognition using registered surface similarity&quot;, In IEEE 12th Signal Processing and Communications Applications Conference. , pp. 571 – 574 [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2004.1338593">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-18844426287&amp;partnerID=40&amp;md5=701380e2856849a1a6637a0d14899188">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="856b34bc-f8ef-44ca-9da2-e0673cc0b6fe" class="">
+</p><p id="98a4ba16-2150-4692-934a-ec1c13b37e34" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

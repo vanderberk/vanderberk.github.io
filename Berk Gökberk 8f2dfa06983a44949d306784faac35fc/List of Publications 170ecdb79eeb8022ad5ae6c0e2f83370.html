@@ -1,0 +1,741 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>List of Publications</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="170ecdb7-9eeb-8022-ad5a-e6c0e2f83370" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🦩</span></div><h1 class="page-title">List of Publications</h1><p class="page-description"></p></header><div class="page-body"><p id="173ecdb7-9eeb-802c-bc66-cfebcda57b96" class="">
+</p><p id="173ecdb7-9eeb-8049-8b9d-d40ff74bac5b" class=""><mark class="highlight-gray">Kantarcı MG, Gökberk B and Akarun L (2025), &quot;Unveiling limitations of 3D object reconstruction models through a novel benchmark&quot;, Signal, Image, and Video Processing. Vol. 19(1) [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/s11760-024-03663-7">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85211369310&amp;doi=10.1007%2fs11760-024-03663-7&amp;partnerID=40&amp;md5=b10ba9f98574c47cfc14cf8cae45a593">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8087-a80a-f8df114c7693" class="">
+</p><p id="173ecdb7-9eeb-80f8-90ad-d2b1d21c177d" class=""><mark class="highlight-gray">Erdem DB and Gökberk B (2024), &quot;Analysis of Viewpoint Dependency in Gait Recognition; [Yürüyüş Tanıma Yöntemlerinin Bakış Açısına Göre Analizi]&quot;, In IEEE 32nd Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU61531.2024.10600902">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200891009&amp;doi=10.1109%2fSIU61531.2024.10600902&amp;partnerID=40&amp;md5=8122574f777d681b5017be3591ce04ec">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80ac-ab26-dc8318cd0b60" class="">
+</p><p id="173ecdb7-9eeb-80d7-ad02-c1e35816fd02" class=""><mark class="highlight-gray">Girgin E, Akarun L and Gökberk B (2024), &quot;Detection and Quantification of Occlusion for 3D Human Pose and Shape Estimation&quot;, In 2nd ICPR Workshop on Facial and Body Expressions.</mark></p><p id="173ecdb7-9eeb-80fb-9802-cb4ed7f3622a" class="">
+</p><p id="173ecdb7-9eeb-8035-9e12-e4d2377e4c03" class=""><mark class="highlight-gray">Kantarcı MG, Gökberk B and Akarun L (2024), &quot;A Novel Part-based Benchmark for 3D Object Reconstruction; [3B Nesne Geriçatma İçin Parça Tabanlı Değerlendirme Önerisi]&quot; , In IEEE 32nd Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU61531.2024.10600720">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200895526&amp;doi=10.1109%2fSIU61531.2024.10600720&amp;partnerID=40&amp;md5=77da72c14fccf343c3ebb7e981b3538c">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8095-9768-fdda9b4cb96f" class="">
+</p><p id="173ecdb7-9eeb-8014-835d-d39453074551" class=""><mark class="highlight-gray">Özçelik TO, Gökberk B and Akarun L (2024), &quot;Self-Supervised Dense Visual Representation Learning; [Kendini Eğiterek Sık Görsel Temsil Öğrenimi]&quot;, In IEEE 32nd Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU61531.2024.10600771">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200914574&amp;doi=10.1109%2fSIU61531.2024.10600771&amp;partnerID=40&amp;md5=f45db94afe3e525d9583d0b534ff9061">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80ec-b514-fd21d82fb723" class="">
+</p><p id="173ecdb7-9eeb-80ba-92c0-e139b61705f5" class=""><mark class="highlight-gray">Abdi Y, Küllü Ö, Keleş MK and Gökberk B (2023), &quot;CPW-DICE: a novel center and pixel-based weighting for damage segmentation&quot;, Connection Science. Vol. 35(1) [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1080/09540091.2023.2259115">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85172348549&amp;doi=10.1080%2f09540091.2023.2259115&amp;partnerID=40&amp;md5=eade9ab20bba43e5bd0a97252e801a05">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80c6-b058-e98d6844b459" class="">
+</p><p id="173ecdb7-9eeb-80d8-9e5f-dcd28e9bdc33" class=""><mark class="highlight-gray">Girgin E, Gökberk B and Akarun L (2023), &quot;A Novel Occlusion Index; [Yeni Bir Örtme Endeksi]&quot;, In IEEE 31st Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU59756.2023.10223983">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85173546709&amp;doi=10.1109%2fSIU59756.2023.10223983&amp;partnerID=40&amp;md5=db6e6dc001480e31c9f7725a4178626b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8081-a0b0-c0df42e15d9f" class="">
+</p><p id="173ecdb7-9eeb-80e2-aa96-d25a645c7bb5" class=""><mark class="highlight-gray">Yıldız BI and Gökberk B (2023), &quot;A Survey of Deepfake Detection Methods; [Derin Sahte Yüz Tespit Yöntemlerinin Incelenmesi]&quot;, In IEEE 31st Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU59756.2023.10223820">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85173478832&amp;doi=10.1109%2fSIU59756.2023.10223820&amp;partnerID=40&amp;md5=20b343249ed5618a79fd22fdd927b01d">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80ca-b78a-c9cc2a082b08" class="">
+</p><p id="173ecdb7-9eeb-80e1-969e-c3b6e260f004" class=""><mark class="highlight-gray">Atıcı E, Gökberk B and Akarun L (2022), &quot;Detection of Free-Standing Conversational Groups with Graph Convolutional Networks&quot;, In International Conference on Pattern Recognition. , pp. 1041 – 1047. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICPR56361.2022.9956536">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85143633550&amp;doi=10.1109%2fICPR56361.2022.9956536&amp;partnerID=40&amp;md5=edfc586e89f77a2ed70af2147793f99e">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80eb-ad5b-f10b1346725d" class="">
+</p><p id="173ecdb7-9eeb-8005-822e-d0f4cd360038" class=""><mark class="highlight-gray">Kantarcı MG, Gökberk B and Akarun L (2022), &quot;A Survey of 3D Object Reconstruction Methods; [3B Nesne Geriçatma Yöntemlerinin Incelemesi]&quot; , In IEEE 30th Signal Processing and Communications Applications Conference. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU55565.2022.9864922">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85138744309&amp;doi=10.1109%2fSIU55565.2022.9864922&amp;partnerID=40&amp;md5=7371e9a6aea94aa885e4f42474826b75">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8008-9c3f-c1ffa3dfeaca" class="">
+</p><p id="173ecdb7-9eeb-809a-bc22-d5cd096f156a" class=""><mark class="highlight-gray">Temiz H, Gökberk B and Akarun L (2021), &quot;TurCoins: Turkish republic coin dataset; [TurCoins: Türkiye cumhuriyeti madeni para veri kümesi]&quot;, In IEEE 29th Conference on Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU53274.2021.9477957">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85111419467&amp;doi=10.1109%2fSIU53274.2021.9477957&amp;partnerID=40&amp;md5=087b2a981a69cc3f18fc025c6b72b84b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80bf-a8a8-eec76a399461" class="">
+</p><p id="173ecdb7-9eeb-80ec-8d41-efc06d0da487" class=""><mark class="highlight-gray">Aktas M, Gökberk B and Akarun L (2019), &quot;Recognizing Non-Manual Signs in Turkish Sign Language&quot;, In 9th International Conference on Image Processing Theory, Tools and Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/IPTA.2019.8936081">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85077967469&amp;doi=10.1109%2fIPTA.2019.8936081&amp;partnerID=40&amp;md5=505c3e0d386dc327d30c90894da035b7">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8026-b4a0-ce476f0be69a" class="">
+</p><p id="173ecdb7-9eeb-8065-9323-e944eef94612" class=""><mark class="highlight-gray">Temiz H, Gökberk B and Akarun L (2019), &quot;Multi-view Reconstruction of 3D Human Pose with Procrustes Analysis&quot;, In 9th International Conference on Image Processing Theory, Tools and Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/IPTA.2019.8936071">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85077969563&amp;doi=10.1109%2fIPTA.2019.8936071&amp;partnerID=40&amp;md5=195c68b2ea08d0018fe0a5f30a132373">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8021-8754-f69bbd442af1" class="">
+</p><p id="173ecdb7-9eeb-8084-971e-f92daacbb763" class=""><mark class="highlight-gray">Camgöz NC, Gökberk B and Akarun L (2015), &quot;Facial landmark localization in depth images using Supervised Descent Method; [Yüz Derinlik Imgelerinde Güdümlü Iniş Yöntemini Kullanarak Nirengi Noktasi Bulma]&quot;, In IEEE 23rd Signal Processing and Communications Applications Conference. , pp. 1997 – 2000. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2015.7130256">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84939133593&amp;doi=10.1109%2fSIU.2015.7130256&amp;partnerID=40&amp;md5=1de4898a172b42a6b3077673d54d0867">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80be-8c14-c4138eea0cba" class="">
+</p><p id="173ecdb7-9eeb-803e-9052-d42bc12c5e34" class=""><mark class="highlight-gray">Camgöz NC, Štruc V, Gökberk B, Akarun L and Kindiroglu AA (2015), &quot;Facial Landmark Localization in Depth Images Using Supervised Ridge Descent&quot;, In IEEE International Conference on Computer Vision Workshops. , pp. 378 – 383. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICCVW.2015.57">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84961990497&amp;doi=10.1109%2fICCVW.2015.57&amp;partnerID=40&amp;md5=2d75f29ff16ddc799c0ec8411e8fee67">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8068-a9d9-e626b5a6be77" class="">
+</p><p id="173ecdb7-9eeb-805e-a508-cae9a1e9ac22" class=""><mark class="highlight-gray">Akkermans AHM, Boughorbel S, Breebaart DJ, Bruekers AAML, Gokberk B, De Groot KTJ, Kelkboom EJC, Kevenaar TAM and Lemma AN (2014), &quot;Robust biometric feature extraction with and without reference point. US Patent 8,655,026&quot;</mark></p><p id="173ecdb7-9eeb-80b1-a67c-defea71d74c1" class="">
+</p><p id="173ecdb7-9eeb-8064-882c-c2fb7086bc3b" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2014), &quot;Detection of realistic facial occlusions for robust 3D face recognition&quot;, In International Conference on Pattern Recognition. , pp. 375 – 380. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICPR.2014.73">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84919934821&amp;doi=10.1109%2fICPR.2014.73&amp;partnerID=40&amp;md5=ce3d4b21457e849d3f57c4ae678e6b6d">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80fc-8e7f-e20e72af889b" class="">
+</p><p id="173ecdb7-9eeb-80eb-a342-e09573fd2716" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2014), &quot;Masked projection for 3D face recognition under occlusion; [Örtmeli durumlarda 3B yüz tanima içinmaskeli izdüşüm]&quot;, In IEEE 22nd Signal Processing and Communications Applications Conference. , pp. 1746 – 1749. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2014.6830587">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84903765773&amp;doi=10.1109%2fSIU.2014.6830587&amp;partnerID=40&amp;md5=7dca81712858027aae7bacaa8d7c6191">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-803f-89d5-ec7429d68ac9" class="">
+</p><p id="173ecdb7-9eeb-8066-8ef8-cb97962a8fa6" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2014), &quot;Robust 3D face identification in the presence of occlusions&quot;, Face Recognition in Adverse Conditions. , pp. 124 – 146. IGI Global. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.4018/978-1-4666-5966-7.ch006">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84946152123&amp;doi=10.4018%2f978-1-4666-5966-7.ch006&amp;partnerID=40&amp;md5=d61e9e56ecd4e5d71e549c84a7cd3073">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80a5-aa3e-de8ad6208582" class="">
+</p><p id="173ecdb7-9eeb-806f-bac2-c981bad1ce2d" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2013), &quot;3-D face recognition under occlusion using masked projection&quot;, IEEE Transactions on Information Forensics and Security. Vol. 8(5), pp. 789 – 802. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/TIFS.2013.2256130">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84876798626&amp;doi=10.1109%2fTIFS.2013.2256130&amp;partnerID=40&amp;md5=a03af22f246e481592c7554a86b64795">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80ab-a62c-d936312b27de" class="">
+</p><p id="173ecdb7-9eeb-80d4-95eb-cf76200460b5" class=""><mark class="highlight-gray">Peng Y, Spreeuwers L, Gökberk B and Veldhuis R (2013), &quot;Comparison of super-resolution benefits for downsampled images and real low-resolution data&quot;, In 34th WIC Symposium on Information Theory in the Benelux. , pp. 244 – 251.</mark></p><p id="173ecdb7-9eeb-8035-9117-e3b704020819" class="">
+</p><p id="173ecdb7-9eeb-8060-bc08-ca481787825a" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2012), &quot;Adaptive model-based 3D face registration for occlusion invariance&quot;, In European Conference on Computer Vision Workshops - Benchmarking Facial Image Analysis Technologies.</mark></p><p id="173ecdb7-9eeb-802a-9081-db157d9547f6" class="">
+</p><p id="173ecdb7-9eeb-8077-8a9a-d8c905d4d585" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2012), &quot;Adaptive registration for occlusion robust 3D face recognition&quot;, Lecture Notes in Computer Science (European Conference on Computer Vision Workshops). Vol. 7585, pp. 557 – 566. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/978-3-642-33885-4_56">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84867705558&amp;doi=10.1007%2f978-3-642-33885-4_56&amp;partnerID=40&amp;md5=a4d02e5742ea84e2e151d2465ff4f58c">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8098-bf62-fa4b5a2081b4" class="">
+</p><p id="173ecdb7-9eeb-8097-a2e2-ea6c523a31d3" class=""><mark class="highlight-gray">Alyüz N, Gökberk B, Spreeuwers L, Veldhuis R and Akarun L (2012), &quot;Robust 3D face recognition in the presence of realistic occlusions&quot;, In 5th International Conference on Biometrics. , pp. 111 – 118. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICB.2012.6199767">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84866780788&amp;doi=10.1109%2fICB.2012.6199767&amp;partnerID=40&amp;md5=ccf05107e22d7d7a0c16c69a4c70589e">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8061-97a7-f4099ff3684d" class="">
+</p><p id="173ecdb7-9eeb-80e9-b81b-c105635b602e" class=""><mark class="highlight-gray">Peng Y, Gökberk B, Spreeuwers L and Veldhuis R (2012), &quot;An evaluation of super-resolution for face recognition&quot;, In 33rd WIC Symposium on Information Theory in the Benelux. , pp. 36 – 43.</mark></p><p id="173ecdb7-9eeb-80e6-8608-deb9b2b576b7" class="">
+</p><p id="173ecdb7-9eeb-8009-960a-cb4c023eb5c8" class=""><mark class="highlight-gray">Alyüz N, Gökberk B, Spreeuwers L, Veldhuis R and Akarun L (2011), &quot;Occlusion-robust 3D face recognition using restoration and local classifiers; [Geri çatma ve bölgesel sınıflandırıcılar ile örtmeye dayanıklı 3B yüz tanıma]&quot;, In IEEE 19th Signal Processing and Communications Applications Conference. , pp. 750 – 753. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2011.5929760">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-79960388812&amp;doi=10.1109%2fSIU.2011.5929760&amp;partnerID=40&amp;md5=7085dbac39de32377c5845981b2ae411">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-808b-a6e4-df830e42a52b" class="">
+</p><p id="173ecdb7-9eeb-8046-b22f-edcddad08478" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2010), &quot;Regional registration for expression resistant 3-D face recognition&quot;, IEEE Transactions on Information Forensics and Security. Vol. 5(3), pp. 425 – 440. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/TIFS.2010.2054081">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-77955689919&amp;doi=10.1109%2fTIFS.2010.2054081&amp;partnerID=40&amp;md5=56c6cd1efd6cf06ae0c51d57892cbbe2">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80cd-9e29-f23a540fa752" class="">
+</p><p id="173ecdb7-9eeb-807b-b656-e88606a439fd" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2009), &quot;Regional registration and curvature descriptors for expression resistant 3D face recognition; [İfadeye dayanıklı 3B yüz tanıma için bölgesel kayıtlama ve kıvrım betimleyicileri]&quot;, In IEEE 17th Signal Processing and Communications Applications Conference. , pp. 544 – 547. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2009.5136453">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-70350302075&amp;doi=10.1109%2fSIU.2009.5136453&amp;partnerID=40&amp;md5=eccce3040654c0ef41d7da6897937000">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8050-93b3-f15d05c47a38" class="">
+</p><p id="173ecdb7-9eeb-8047-ad50-dbaa2148112c" class=""><mark class="highlight-gray">Dibeklioǧlu H, Gökberk B and Akarun L (2009), &quot;Nasal region-based 3D face recognition under pose and expression variations&quot;, Lecture Notes in Computer Science (International Conference on Biometrics). Vol. 5558, pp. 309 – 318. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/978-3-642-01793-3_32">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-69949122155&amp;doi=10.1007%2f978-3-642-01793-3_32&amp;partnerID=40&amp;md5=0c533f7889c0563905e678c86c2d7886">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8015-87e1-edbe827bf048" class="">
+</p><p id="173ecdb7-9eeb-80e5-83f7-e05255a2bbf8" class=""><mark class="highlight-gray">Gökberk B, Ali Salah A, Akarun L, Etheve R, Riccio D and Dugelay J-L (2009), &quot;3D face recognition&quot;, Guide to Biometric Reference Systems and Performance Evaluation. , pp. 263 – 295. Springer Verlag. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/978-1-84800-292-0_9">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84889975837&amp;doi=10.1007%2f978-1-84800-292-0_9&amp;partnerID=40&amp;md5=cd36ab87f66ad735277553ab0130b880">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8011-8e97-f008f97a00cb" class="">
+</p><p id="173ecdb7-9eeb-80c7-b734-e977dcf7eca8" class=""><mark class="highlight-gray">Gökberk B, Spreeuwers LJ and Veldhuis R (2009), &quot;Fusion of likelihood ratio classifier with ICP-based matcher for 3D face recognition&quot;, In 30th WIC Symposium on Information Theory in the Benelux.</mark></p><p id="173ecdb7-9eeb-801f-80c7-c448f2c42bac" class="">
+</p><p id="173ecdb7-9eeb-8035-af50-d2dea7bebf68" class=""><mark class="highlight-gray">Xu H, Veldhuis RNJ, Bazen AM, Kevenaar TAM, Akkermans TAHM and Gökberk B (2009), &quot;Fingerprint verification using spectral minutiae representations&quot;, IEEE Transactions on Information Forensics and Security. Vol. 4(3), pp. 397 – 409. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/TIFS.2009.2021692">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-69749099895&amp;doi=10.1109%2fTIFS.2009.2021692&amp;partnerID=40&amp;md5=b48743470b7b34561b84b5b23e5084cd">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80b5-a3f5-d23afde17be3" class="">
+</p><p id="173ecdb7-9eeb-8029-89ae-e759a7028d0f" class=""><mark class="highlight-gray">Alyüz N, Dibeklioǧlu H, Gökberk B and Akarun L (2008), &quot;Part-based registration for expression resistant 3D face recognition; [İfadeye dayanıklı 3B yüz tanıma için parçaya dayalı kayıtlama]&quot;, In IEEE 16th Signal Processing, Communication and Applications Conference. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2008.4632756">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-56449087010&amp;doi=10.1109%2fSIU.2008.4632756&amp;partnerID=40&amp;md5=e9605783296aaa4a3a1879f20c8ae866">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-807c-b9f7-cb42c91a49d9" class="">
+</p><p id="173ecdb7-9eeb-80ac-b045-e7731a099431" class=""><mark class="highlight-gray">Alyüz N, Gökberk B and Akarun L (2008), &quot;A 3D face recognition system for expression and occlusion invariance&quot;, In IEEE 2nd International Conference on Biometrics: Theory, Applications, and Systems. , pp. 1 – 7. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/BTAS.2008.4699389">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-67549122510&amp;doi=10.1109%2fBTAS.2008.4699389&amp;partnerID=40&amp;md5=81147c31fac69dd53371afa53266ead8">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-808c-84ec-d4dd48f5d7a8" class="">
+</p><p id="173ecdb7-9eeb-8057-ab04-d37ace8f6f0a" class=""><mark class="highlight-gray">Alyüz N, Gökberk B, Dibeklioǧlu H and Akarun L (2008), &quot;Component-based registration with curvature descriptors for expression insensitive 3D face recognition&quot;, In IEEE 8th International Conference on Automatic Face and Gesture Recognition. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/AFGR.2008.4813359">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-67650691128&amp;doi=10.1109%2fAFGR.2008.4813359&amp;partnerID=40&amp;md5=d2ae668048e6853c073c072d611fd116">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80be-b5f3-d59401e2c1c8" class="">
+</p><p id="173ecdb7-9eeb-80cb-913b-e2f97d9174a1" class=""><mark class="highlight-gray">Alyüz N, Gökberk B, Dibeklioǧlu H, Savran A, Salah AA, Akarun L and Sankur B (2008), &quot;3D face recognition benchmarks on the Bosphorus database with focus on facial expressions&quot;, Lecture Notes in Computer Science (European Workshop on Biometrics and Identity Management). Vol. 5372, pp. 57 – 66. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/978-3-540-89991-4_7">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-59149083827&amp;doi=10.1007%2f978-3-540-89991-4_7&amp;partnerID=40&amp;md5=375f6e6adae47da983e90479d599e15e">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80b2-a919-f361d5512841" class="">
+</p><p id="173ecdb7-9eeb-80c5-9386-eefdb04013b3" class=""><mark class="highlight-gray">Gökberk B, Dutagaci H, Ulas A, Akarun L and Sankur B (2008), &quot;Representation plurality and fusion for 3-D face recognition&quot;, IEEE Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics. Vol. 38(1), pp. 155 – 173. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/TSMCB.2007.908865">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-39649102743&amp;doi=10.1109%2fTSMCB.2007.908865&amp;partnerID=40&amp;md5=7351ba72dcd26832ee35265d65d5659b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8050-9b80-fe665e56922a" class="">
+</p><p id="173ecdb7-9eeb-80b4-b198-f1b3059e576e" class=""><mark class="highlight-gray">Savran A, Alyüz N, Dibeklioǧlu H, Çeliktutan O, Gökberk B, Sankur B and Akarun L (2008), &quot;Bosphorus database for 3D face analysis&quot;, Lecture Notes in Computer Science (European Workshop on Biometrics and Identity Management). Vol. 5372, pp. 47 – 56. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/978-3-540-89991-4_6">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-59149105946&amp;doi=10.1007%2f978-3-540-89991-4_6&amp;partnerID=40&amp;md5=83b7bbad9fb84b7d8e059c0c7a4b5fec">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80d1-b0ef-c17afea6c954" class="">
+</p><p id="173ecdb7-9eeb-8036-9cdc-f12844ee0176" class=""><mark class="highlight-gray">Dutaǧacı H, Gökberk B, Sankur B and Akarun L (2007), &quot;A study on region-based recognition of 3D faces with expression variations&quot;, In European Signal Processing Conference. , pp. 753 – 757. [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84863741509&amp;partnerID=40&amp;md5=490b5a840ec56fc4eacdbd91fe024360">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8015-af81-c562c3782231" class="">
+</p><p id="173ecdb7-9eeb-8001-bd88-d3f79e9fdfdf" class=""><mark class="highlight-gray">Gökberk B, Dutaǧaci H, Akarun L and Sankur B (2007), &quot;Analysis of representation and feature extraction schemes for 3D face recognition; [3B yüz tanima i̇çin betimleme ve öznitelik çikarim yöntemlerinin i̇ncelenmesi]&quot;, In IEEE 15th Signal Processing and Communications Applications. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2007.4298757">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-50249171190&amp;doi=10.1109%2fSIU.2007.4298757&amp;partnerID=40&amp;md5=0dd06a6d6ddfb5d60bbcdc0baeb66f1b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8061-8b37-d9a6c3c9822f" class="">
+</p><p id="173ecdb7-9eeb-8025-a60e-c93ad4a46946" class=""><mark class="highlight-gray">Gökberk B, Irfanoǧlu MO, Akarun L and Alpaydin E (2007), &quot;Learning the best subset of local features for face recognition&quot;, Pattern Recognition. Vol. 40(5), pp. 1520 – 1532. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1016/j.patcog.2006.09.009">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-33846280788&amp;doi=10.1016%2fj.patcog.2006.09.009&amp;partnerID=40&amp;md5=8a7f3f13654b4030a9a9bde2938097a8">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80d2-bda3-ca17b9ed5023" class="">
+</p><p id="173ecdb7-9eeb-802e-b4d7-e6d0a2eb63ee" class=""><mark class="highlight-gray">Kelkboom E, Gökberk B, Kevenaar T, Akkermans A and Van Der Veen M (2007), &quot;&quot;3D Face&quot;: Biometric template protection for 3D face recognition&quot;, Lecture Notes in Computer Science (International Conference on Biometrics). Vol. 4642, pp. 566 – 573. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/978-3-540-74549-5_60">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-37849002150&amp;doi=10.1007%2f978-3-540-74549-5_60&amp;partnerID=40&amp;md5=439180e8d7e4707d63ca9a00af57b78e">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8045-a85b-c0ddffb1fb5e" class="">
+</p><p id="173ecdb7-9eeb-807a-b3fa-fad63bf0541d" class=""><mark class="highlight-gray">Gökberk B and Akarun L (2006), &quot;Comparative analysis of decision-level fusion algorithms for 3D face recognition&quot;, In International Conference on Pattern Recognition. Vol. 3, pp. 1018 – 1021. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICPR.2006.387">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-34147134995&amp;doi=10.1109%2fICPR.2006.387&amp;partnerID=40&amp;md5=eabb075305e97cf725fe4e7f19e4d45f">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-803a-b7a3-d1ebe22ab043" class="">
+</p><p id="173ecdb7-9eeb-80fd-baf1-f3db7407497a" class=""><mark class="highlight-gray">Gökberk B, Irfanoǧlu MO and Akarun L (2006), &quot;3D shape-based face representation and feature extraction for face recognition&quot;, Image and Vision Computing. Vol. 24(8), pp. 857 – 869. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1016/j.imavis.2006.02.009">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-33746916511&amp;doi=10.1016%2fj.imavis.2006.02.009&amp;partnerID=40&amp;md5=922f046ea23bd2b2e0c78589df7b20db">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8063-b9a5-d1fdf400e536" class="">
+</p><p id="173ecdb7-9eeb-808c-b4b5-e44ff892787d" class=""><mark class="highlight-gray">Salah AA, Gökberk B and Akarun L (2006), &quot;Üç Boyutlu Yüz Tanıma&quot;, In 5th GAP Engineering Congress.</mark></p><p id="173ecdb7-9eeb-80c4-b455-d2a273e6e66d" class="">
+</p><p id="173ecdb7-9eeb-8004-b9f6-f40a0401a79b" class=""><mark class="highlight-gray">Akarun L, Gökberk B and Salah AA (2005), &quot;3D face recognition for biometric applications&quot;, In 13th European Signal Processing Conference. , pp. 2094 – 2098. [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84863650861&amp;partnerID=40&amp;md5=422bfa1766fbe3d1cbb9415012d8114b">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8086-aa70-d02cbbee4646" class="">
+</p><p id="173ecdb7-9eeb-8097-9e0a-db1bc93e871a" class=""><mark class="highlight-gray">Gökberk B and Akarun L (2005), &quot;Selection and extraction of patch descriptors for 3D face recognition&quot;, Lecture Notes in Computer Science (International Symposium on Computer and Information Sciences). Vol. 3733, pp. 718 – 727. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/11569596_74">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-33646495725&amp;doi=10.1007%2f11569596_74&amp;partnerID=40&amp;md5=b54ebbb6983c46c3a2b1c22ea75a1ca7">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80a2-812d-fa97cbe472e2" class="">
+</p><p id="173ecdb7-9eeb-800f-ac35-c74fd17b41e2" class=""><mark class="highlight-gray">Gökberk B, Irfanoglu MO, Akarun L and Alpaydin E (2005), &quot;Selection of location, frequency, and orientation parameters of 2D Gabor wavelets for face recognition&quot;, In Lecture Notes in Computer Science (Advanced Studies in Biometrics). Vol. 3161, pp. 138 – 146. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/11493648_9">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-23944446608&amp;doi=10.1007%2f11493648_9&amp;partnerID=40&amp;md5=a28062fff20c4854324c7f50dea61206">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-809e-a2ad-df4db57e628e" class="">
+</p><p id="173ecdb7-9eeb-80fe-baa5-fcac61d0ec5d" class=""><mark class="highlight-gray">Gökberk B, Salah AA and Akarun L (2005), &quot;Rank-based decision fusion for 3D shape-based face recognition&quot;, In Lecture Notes in Computer Science (International Conference on Audio- and Video-Based Biometric Person Authentication). Vol. 3546, pp. 1019 – 1028. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1007/11527923_106">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-26444589069&amp;doi=10.1007%2f11527923_106&amp;partnerID=40&amp;md5=310530c9cc32a333dde17c656de30aa6">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80f1-ac9e-f813cc605625" class="">
+</p><p id="173ecdb7-9eeb-8029-9c32-d0cfa530b8f5" class=""><mark class="highlight-gray">Gökberk B, Akarun L and Aksan B (2004), &quot;How to deceive a face recognizer?&quot;, In Biometrics: Challenges Arising from Theory to Practice Workshop (BCTP).</mark></p><p id="173ecdb7-9eeb-803f-8c00-e803be4bb462" class="">
+</p><p id="173ecdb7-9eeb-80a2-abb6-c362810e04bf" class=""><mark class="highlight-gray">Irfanoǧlu M, Gökberk B and Akarun L (2004), &quot;3D shape-based face recognition using automatically registered facial surfaces&quot;, In International Conference on Pattern Recognition. Vol. 4, pp. 183 – 186. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICPR.2004.1333734">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-10044283958&amp;doi=10.1109%2fICPR.2004.1333734&amp;partnerID=40&amp;md5=79dfa30d05e714fa9503262d0823a1ef">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80c6-b6b2-e70ea1c68ceb" class="">
+</p><p id="173ecdb7-9eeb-80d6-be5d-d81b77632c92" class=""><mark class="highlight-gray">Irfanoǧlu MO, Gökberk B and Akarun L (2004), &quot;3D shape-based face recognition using registered surface similarity&quot;, In IEEE 12th Signal Processing and Communications Applications Conference. , pp. 571 – 574 [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/SIU.2004.1338593">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-18844426287&amp;partnerID=40&amp;md5=701380e2856849a1a6637a0d14899188">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8004-bcd7-e3e41a0d993f" class="">
+</p><p id="173ecdb7-9eeb-800f-846b-fa7e95cb44d5" class=""><mark class="highlight-gray">Gökberk B, Akarun L and Alpaydın E (2003), &quot;Selection of kernel location, frequency, and orientation parameters of 2D Gabor wavelets for face recognition&quot;, In Perception. Vol. 32</mark></p><p id="173ecdb7-9eeb-808e-bf82-decd6d15ca9d" class="">
+</p><p id="173ecdb7-9eeb-8025-984d-c77266113838" class=""><mark class="highlight-gray">Gökberk B, Irfanoglu M, Akarun L and Alpaydin E (2003), &quot;Optimal Gabor kernel location selection for face recognition&quot;, In IEEE International Conference on Image Processing. Vol. 1, pp. 677 – 680. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICIP.2003.1247052">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-0344666587&amp;partnerID=40&amp;md5=3b0c9c248988aaaf83c54851aa81d2b8">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-80a2-aa55-c5f476c2af6f" class="">
+</p><p id="173ecdb7-9eeb-80b0-9c8f-ff8675b043db" class=""><mark class="highlight-gray">Gökberk B, Irfanoğlu MO, Doğu H, Akarun L and Alpaydın E (2003), &quot;Yüz Tanıma İçin Eniyi Gabor Parametrelerinin Seçimi&quot;, In IEEE Signal Processing and Communications Applications Conference.</mark></p><p id="173ecdb7-9eeb-807c-bb9e-f34503a4d0fa" class="">
+</p><p id="173ecdb7-9eeb-8007-906e-fae4c6db91e6" class=""><mark class="highlight-gray">Gökberk B, Akarun L and Alpaydin E (2002), &quot;Feature selection for pose invariant face recognition&quot;, In International Conference on Pattern Recognition. Vol. 16(4), pp. 306 – 309. [</mark><mark class="highlight-gray"><a href="https://doi.org/10.1109/ICPR.2002.1047457">DOI</a></mark><mark class="highlight-gray">] [</mark><mark class="highlight-gray"><a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-32344453594&amp;partnerID=40&amp;md5=904231e2d908ad8669c96163dd119124">URL</a></mark><mark class="highlight-gray">]</mark></p><p id="173ecdb7-9eeb-8075-ad55-eb2b1cafee51" class="">
+</p><p id="173ecdb7-9eeb-80d4-b6c9-ee1f1bf74cad" class=""><mark class="highlight-gray">Gökberk B, Akarun L and Alpaydin E (2001), &quot;Gabor Wavelet Based Pose Estimation for Face Recognition&quot;, In 16th International Symposium on Computer and Information Sciences. , pp. 275 – 280.</mark></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
